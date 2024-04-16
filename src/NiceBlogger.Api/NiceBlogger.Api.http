@@ -1,0 +1,23 @@
+@NiceBlogger.Api_HostAddress = https://localhost:5001/api/v1
+
+GET {{NiceBlogger.Api_HostAddress}}/post
+
+###
+
+@id=0233d3ac-f2b2-10f2-81b3-bae1ad6166f7
+@includeAuthorSwitch=true
+GET {{NiceBlogger.Api_HostAddress}}/post/{{id}}?includeAuthor={{includeAuthorSwitch}}
+
+###
+
+POST {{NiceBlogger.Api_HostAddress}}/post
+Content-Type: application/json
+
+{
+  "authorId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "title": "nice title",
+  "description": "nice description",
+  "content": "nice content"
+}
+
+###
